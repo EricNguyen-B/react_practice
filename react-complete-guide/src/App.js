@@ -41,6 +41,7 @@ const app = props => {
         otherState: personsState.otherState
       } )
     }
+  
 
     return (
       <div className="App">
