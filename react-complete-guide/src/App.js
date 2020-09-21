@@ -1,29 +1,18 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './App.css';
+import Output from './Output/Output';
 
-import UserInput from './UserInput/UserInput';
-import UserOutput from './UserOutput/UserOutput';
-
-class App extends Component {
-  state = {
-    username: 'initial_name'
-  }
-
-  inputChangedHandler = (event) => {
-    this.setState({username: event.target.value});
-  }
-  render() {
-    return (
-      <div className="App">
-        <UserInput 
-          changed={this.inputChangedHandler}
-          currentName={this.state.username}/>
-        <UserOutput userName={this.state.username} />
-        <UserOutput userName={this.state.username} />
-        <UserOutput userName="Kevin"/>
-      </div>
-    );
-  }
+// UserInput component
+const App = () => {
+  return(
+    <div className="App">
+      <h1>Form</h1>
+      <input type="text"></input>
+      <Output username="Sam" />
+      <Output username="Dan" />
+      <Output username="Kevin" />
+    </div>
+  );
 }
 
 export default App;
