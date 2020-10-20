@@ -102,7 +102,7 @@ class BurgerBuilder extends Component {
             .then( response => {
                 this.setState({ loading: false, purchasing: false });
             } )
-            .catch(error => {
+            .catch( error => {
                 this.setState({ loading: false, purchasing: false});
             } ); 
     }
